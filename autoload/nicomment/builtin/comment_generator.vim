@@ -8,6 +8,7 @@ let s:comment_generator = {
 function! nicomment#builtin#comment_generator#new() abort
   let comment_generator = deepcopy(s:comment_generator)
   let comment_generator.rand = s:Xor128.new_generator()
+  let comment_generator.rand.seed([has('reltime') ? reltime()[1] : localtime()])
   return comment_generator
 endfunction
 
