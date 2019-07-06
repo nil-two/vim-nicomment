@@ -12,8 +12,8 @@ Requirements
 Usage
 -----
 
-It flows comments when `:NicommentStart` executed.
-It stop flowing comments when `:NicommentStop` executed.
+It start flowing comments when `:NicommentStart` executed.
+It stops flowing comments when `:NicommentStop` executed.
 
 Commands
 --------
