@@ -15,6 +15,22 @@ Usage
 It flows comments when `:NicommentStart` executed.
 It stop flowing comments when `:NicommentStop` executed.
 
+Commands
+--------
+
+### `:NicommentStart`
+
+It starts flowing comments.
+
+### `:NicommentStop`
+
+It stops flowing comments.
+
+### `:NicommentFlow <comment>`
+
+It flows the comment.
+(NOTE: it requires `:NicommentStart` executed and `g:nicomment_comment_generator` doesn't exist)
+
 Configuration
 -------------
 
