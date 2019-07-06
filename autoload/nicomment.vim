@@ -10,6 +10,10 @@ function! nicomment#start() abort
   let s:global_comment_flower_timer_id = timer_start(100, comment_flower.resume, {'repeat':  -1})
 endfunction
 
+function! nicomment#flowComment(comment) abort
+  call add(g:nicomment_comments_queue, a:comment)
+endfunction
+
 function! nicomment#stop() abort
   " FIXME: popup_clear()をここで使うのはよくないが他の方法を思いつかない。
   call popup_clear()
