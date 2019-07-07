@@ -28,10 +28,6 @@ let s:comments = [
 \ ]
 
 function! s:comment_generator.generate() abort
-  if len(g:nicomment_comments_queue) >= 1
-    return remove(g:nicomment_comments_queue, 0)
-  endif
-
   if abs(self.rand.next() % 10) == 0
     return s:comments[abs(self.rand.next() % len(s:comments))](self)
   else

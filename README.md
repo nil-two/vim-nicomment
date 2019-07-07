@@ -29,7 +29,7 @@ It stops flowing comments.
 ### `:NicommentFlow <comment>`
 
 It flows the comment.
-(NOTE: it requires `:NicommentStart` executed and `g:nicomment_comment_generator` doesn't exist)
+(NOTE: it requires `:NicommentStart` executed)
 
 Configuration
 -------------

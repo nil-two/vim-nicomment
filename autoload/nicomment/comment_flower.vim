@@ -13,7 +13,13 @@ function! nicomment#comment_flower#new(max_lineno, comment_generator) abort
 endfunction
 
 function! s:comment_flower.resume(timer_id) abort
-  let comment = self.comment_generator.generate()
+  let comment = v:null
+  if len(g:nicomment_comments_queue) >= 1
+    let comment = remove(g:nicomment_comments_queue, 0)
+  else
+    let comment = self.comment_generator.generate()
+  endif
+
   if type(comment) == v:t_string
     let min_registance   = v:null
     let min_registance_i = v:null
